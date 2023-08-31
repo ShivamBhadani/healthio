@@ -44,16 +44,16 @@ app.post('/cx',async(request,response)=>{
 }
 );
 
-app.post('/attendance',async(request,response)=>{
-    const attendance=new Attendance(request.body);
-    try{
-        await Attendance.create(attendance);
-        return response.json(attendance);
-    }catch(error){
-        return response.json({error:error.message});
-    }
-}
-);
+// app.post('/attendance',async(request,response)=>{
+//     const attendance=new Attendance(request.body);
+//     try{
+//         await Attendance.create(attendance);
+//         return response.json(attendance);
+//     }catch(error){
+//         return response.json({error:error.message});
+//     }
+// }
+// );
 
 app.put('/feessubmitted/:id',async(request,response)=>{
    const id=request.params.id;
